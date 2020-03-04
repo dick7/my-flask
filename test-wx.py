@@ -10,10 +10,9 @@ from flask import Flask, make_response    # 这些是本例中所有用到的库
 class Message(object):
     def __init__(self, req):
         self.request = req
-        self.token = '【这里填刚刚公众号页面上的项目】'
-        self.AppID = '【这里填刚刚公众号页面上的项目】'
-        self.AppSecret = '【这里填刚刚公众号页面上的项目】'
-
+        self.AppID = 'wx4dee934d18a4b8c9'
+        self.AppSecret = '4ae4f206b03af4c84fdccb7a2a0fe544'
+        self.token = 'R8zrosrZdSX4rsrQSsFKNSHs4v2dV3J4'
 
 class Get(Message):
     def __init__(self, req):
@@ -91,7 +90,7 @@ class Reply(Post):
 
     def music(self, ThumbMediaId, Title='', Description='', MusicURL='', HQMusicUrl=''):
         pass
-        
+
     def reply(self):
         response = make_response(self.xml)
         response.content_type = 'application/xml'
