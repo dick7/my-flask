@@ -7,7 +7,7 @@ virtualenv -p ~/anaconda3/bin/python venv
 
 source $PWD/venv/bin/activate
 
-pip install -Ur requirement.txt
+# pip install -Ur requirement.txt
 
 export FLASK_ENV=development
 
