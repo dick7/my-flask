@@ -2,6 +2,8 @@
 
 ps -ef|grep flask|awk '{print $2}'|xargs kill -9
 
+rm -rf venv
+
 # virtualenv -p python3 venv
 virtualenv -p ~/anaconda3/bin/python venv
 

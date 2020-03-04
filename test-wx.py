@@ -24,9 +24,9 @@ class Get(Message):
         self.return_code = 'Invalid'
 
     def verify(self):
-        # data = sorted([self.token, self.timestamp, self.nonce])    # 字典排序
-        print(self.token, self.timestamp, self.nonce)
-        data = [self.token, self.timestamp, self.nonce]
+        data = sorted([self.token, self.timestamp, self.nonce])    # 字典排序
+        # print(self.token, self.timestamp, self.nonce)
+        # data = [self.token, self.timestamp, self.nonce]
         string = ''.join(data).encode('utf-8')    # 拼接成字符串
         hashcode = hashlib.sha1(string).hexdigest()    # sha1加密
         if self.signature == hashcode:
